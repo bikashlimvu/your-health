@@ -1,0 +1,28 @@
+// Breakpoints
+$mobile: 480px;
+$small-tablet: 768px;
+$tablet: 1024px;
+$small-desktop: 1280px;
+$desktop: 1480px;
+
+// Colours
+$background-color: #FFFFFF;
+$black: #000000;
+$white: #FFFFFF;
+$text-color: #666;
+
+//hamburger-icon
+$height-icon: 28px;
+$width-line: 45px;
+$height-line: 6px;
+$transition-time: 0.4s;
+$rotation: 45deg;
+$translateY: ($height-icon / 2);
+$translateX: 0;
+
+// Typography
+$heading-font: 'Raleway', sans-serif;
+$body-font-size: 16px;
+$body-font: 'Open Sans', sans-serif;
+$body-font-weight: 400;
+$body-line-height: 1.4;
