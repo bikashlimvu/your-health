@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:400,700,800');
+
+h1,
+h2,
+h3 {
+    font-family: $heading-font;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $black;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 44px;
+    line-height: 1.8;
+
+    @include until ($tablet) {
+        font-size: 33px;
+    }
+}
+
+h2 {
+    font-size: 34px;
+    display: inline-block;
+    color: white;
+
+    @include until ($mobile) {
+        font-size: 28px;
+    }
+}
+
+h3 {
+    font-size: 18px;
+    color: white;
+    margin: 0 0 10px 0;
+}
+
+p {
+    margin: 0 0 14px 0;
+}
+
+a {
+    color: $text-color;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
