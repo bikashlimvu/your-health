@@ -1,0 +1,48 @@
+@import
+	'config/mixins',
+	'config/variables';
+
+@import
+	'base/normalize',
+	'base/flickity',
+	'base/typography';
+
+@import
+	'modules/header',
+	'modules/home',
+	'modules/contact',
+	'modules/sidebar',
+	'modules/member',
+	'modules/elements';
+
+body {
+	font-family: $body-font;
+	font-size: $body-font-size;
+	font-weight: $body-font-weight;
+	line-height: $body-line-height;
+	color: $text-color;
+	background-color: $background-color;
+	min-width: 320px;
+}
+
+.centering {
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1700px;
+	margin: 0 auto;
+}
+
+.has-bg {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.main {
+	display: flex;
+	height: 100vh;
+
+	&.is-noscroll {
+		overflow: hidden;
+	}
+}
