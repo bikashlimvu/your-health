@@ -1,0 +1,55 @@
+#hamburger-icon {
+    width: $width-line;
+    height: $height-icon;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+
+    .line {
+        display: block;
+        background-color: $black;
+        width: $width-line;
+        height: $height-line;
+        position: absolute;
+        left: 0;
+        border-radius: ($height-line / 2);
+        transition: all $transition-time;
+
+        &.line-1 {
+            top: 0;
+        }
+        &.line-2 {
+            top: 50%;
+        }
+        &.line-3 {
+            top: 100%;
+        }
+    }
+    &.active {
+        .line-1 {
+            transform: translateY($translateY) translateX($translateX) rotate($rotation);
+        }
+        .line-2 {
+            opacity: 0;
+        }
+        .line-3  {
+            transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+        }
+    }
+}
+
+.header {
+    display: none;
+    position: relative;
+
+    @include until ($tablet) {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .header-logo {
+        width: 110px;
+    }
+}
