@@ -1,0 +1,38 @@
+.section {
+    position: relative;
+    width: 80%;
+
+    @include until ($tablet) {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    @include at-least ($tablet) {
+        margin-left: 20%;
+        padding-left: 30px;
+    }
+
+    &.is-active {
+        margin-right: -25%;
+    }
+
+    &.has-padding {
+        padding: 60px 0;
+
+            @include until ($tablet) {
+                padding:  0 0 35px 0;
+            }
+
+            @include until ($tablet) {
+                padding: 0 0 20px 0;
+            }
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:first-child {
+        margin-bottom: 0;
+    }
+}
