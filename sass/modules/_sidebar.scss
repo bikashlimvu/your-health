@@ -1,0 +1,130 @@
+.sidebar {
+	position: relative;
+	width: 20%;
+	height: 100%;
+	margin-left: 0;
+	margin-right: 20px;
+    transition: all .3s linear;
+
+	@include at-least ($tablet) {
+		position: fixed;
+		z-index: 11;
+		min-width: 210px;
+		max-width: 340px;
+	}
+
+	@include until ($tablet) {
+		width: 25%;
+		min-width: 25%;
+		margin-left: -28%;
+	}
+
+	@include until ($mobile) {
+		min-width: 160px;
+		margin-left: -54%;
+	}
+
+	&.is-active {
+		margin-left: 0;
+	}
+
+
+    .logo {
+		@include until ($tablet) {
+			display: none;
+		}
+
+		img {
+			width: 100%;
+			max-width: 250px;
+		}
+    }
+
+	.navigation {
+		list-style: none;
+		padding-left: 20px;
+
+		@include until ($tablet) {
+			padding: 0;
+			margin: 0;
+		}
+
+		.menu-item {
+			margin: 0 0 25px 0;
+
+			a {
+				font-family: $heading-font;
+				font-size: 26px;
+				font-weight: 400;
+				color: $black;
+				text-transform: uppercase;
+				transition: all .2s ease;
+
+				@include until ($tablet) {
+					font-size: 20px;
+				}
+			}
+
+			a {
+				&:hover {
+					font-weight: 700;
+				}
+			}
+
+			&.is-active {
+				a {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+
+	.social {
+		list-style: none;
+		padding-left: 20px;
+
+		@include until ($tablet) {
+			padding-left: 0;
+		}
+
+		li {
+			display: inline-block;
+
+			@include at-least ($small-desktop) {
+				padding: 5px;
+			}
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+
+			img {
+				max-width: 38px;
+				transition: all .2s linear;
+				border: 1px solid $white;
+				border-radius: 25px;
+				padding: 5px;
+
+				@include at-least ($small-desktop) {
+					max-width: 42px;
+				}
+			}
+
+			&:hover {
+
+				img {
+					border: 1px solid $black;
+				}
+			}
+		}
+	}
+
+	.copyright {
+		position: absolute;
+		bottom: 0;
+	}
+}
